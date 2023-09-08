@@ -29,4 +29,5 @@ public class Post {
     private Boolean visible;
 }
 
-/* TODO: Include file attachment feature. */
+/* TODO: Include file attachment feature.
+*  TODO: Add unique constraint validation in user field.*/
