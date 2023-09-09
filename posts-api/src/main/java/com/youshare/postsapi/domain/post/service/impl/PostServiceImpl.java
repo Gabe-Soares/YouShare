@@ -1,5 +1,6 @@
 package com.youshare.postsapi.domain.post.service.impl;
 
+import com.youshare.postsapi.domain.post.Post;
 import com.youshare.postsapi.domain.post.PostRepository;
 import com.youshare.postsapi.domain.post.dto.PostDetailsDTO;
 import com.youshare.postsapi.domain.post.service.PostService;
@@ -13,9 +14,14 @@ public class PostServiceImpl implements PostService {
     PostRepository postRepository;
 
     @Override
-    public PostDetailsDTO getPostById(Long id) {
+    public PostDetailsDTO getPostDetailsById(Long id) {
         var post = postRepository.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
         return new PostDetailsDTO(post);
+    }
+
+    @Override
+    public void savePost(Post post) {
+        postRepository.save(post);
     }
 }
