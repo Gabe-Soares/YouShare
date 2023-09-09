@@ -7,7 +7,7 @@ CREATE TABLE users(
 );
 CREATE TABLE posts(
     id BIGINT NOT NULL auto_increment,
-    user_id BIGINT NOT NULL UNIQUE,
+    user_id BIGINT NOT NULL,
     content VARCHAR(140) NOT NULL,
     reactions INT,
     comments INT,
