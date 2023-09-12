@@ -44,6 +44,10 @@ public class Post {
     public void updateContent(String newContent) {
         this.content = newContent;
     }
+
+    public void addReaction() {
+        this.reactions += 1;
+    }
 }
 
 /* TODO: Include file attachment feature.

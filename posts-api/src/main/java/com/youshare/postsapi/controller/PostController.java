@@ -48,4 +48,11 @@ public class PostController {
         post.updateContent(newContentDto.newContent());
         return ResponseEntity.ok(new PostDetailsDTO(post));
     }
+
+    @GetMapping
+    public ResponseEntity reactToContent(@RequestBody @NotNull Long contentId){
+        var post = postService.getPostById(contentId);
+        post.addReaction();
+        return ResponseEntity.ok(new PostDetailsDTO(post));
+    }
 }
