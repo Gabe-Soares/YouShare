@@ -7,9 +7,10 @@ import com.youshare.postsapi.domain.post.dto.UpdatedContentDTO;
 import com.youshare.postsapi.domain.post.service.PostService;
 import com.youshare.postsapi.domain.user.service.UserService;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,12 @@ public class PostController {
 
     @Autowired
     UserService userService;
+
+    @GetMapping
+    public ResponseEntity<Page<PostDetailsDTO>> getPostFeed(@PageableDefault(size=5, sort={"id"}) Pageable pagination){
+        var page = postService.getPostFeed(pagination);
+        return ResponseEntity.ok(page);
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<PostDetailsDTO> getPostById(@PathVariable Long id){
