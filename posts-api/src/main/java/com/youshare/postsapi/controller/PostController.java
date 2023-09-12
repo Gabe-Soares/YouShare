@@ -49,9 +49,10 @@ public class PostController {
         return ResponseEntity.ok(new PostDetailsDTO(post));
     }
 
-    @GetMapping
-    public ResponseEntity reactToContent(@RequestBody @NotNull Long contentId){
-        var post = postService.getPostById(contentId);
+    @GetMapping("/{id}/react")
+    @Transactional
+    public ResponseEntity reactToContent(@PathVariable Long id){
+        var post = postService.getPostById(id);
         post.addReaction();
         return ResponseEntity.ok(new PostDetailsDTO(post));
     }
