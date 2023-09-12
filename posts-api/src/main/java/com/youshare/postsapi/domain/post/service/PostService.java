@@ -6,5 +6,7 @@ import com.youshare.postsapi.domain.post.dto.PostDetailsDTO;
 public interface PostService {
     public PostDetailsDTO getPostDetailsById(Long id);
 
+    public Post getPostById(Long id);
+
     void savePost(Post post);
 }

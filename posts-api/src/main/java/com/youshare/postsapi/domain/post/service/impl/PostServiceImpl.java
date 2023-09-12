@@ -21,6 +21,12 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    public Post getPostById(Long id) {
+        return postRepository.findById(id)
+                .orElseThrow(EntityNotFoundException::new);
+    }
+
+    @Override
     public void savePost(Post post) {
         postRepository.save(post);
     }

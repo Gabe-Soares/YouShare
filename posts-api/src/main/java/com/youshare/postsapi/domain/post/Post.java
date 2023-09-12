@@ -40,6 +40,10 @@ public class Post {
         this.postedDateTime = LocalDateTime.now();
         this.visible = true;
     }
+
+    public void updateContent(String newContent) {
+        this.content = newContent;
+    }
 }
 
 /* TODO: Include file attachment feature.
