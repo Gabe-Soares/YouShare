@@ -32,5 +32,5 @@ As _Carl Sagan_ said [somewhere](https://www.youtube.com/watch?v=7s664NsLeFM).
 > If you wish to make an apple pie from scratch, you must first invent the universe.
 
 <div align="center">
-**I hope you enjoyed visiting my project!**
+<b>I hope you enjoyed visiting my project!</b>
 </div>
