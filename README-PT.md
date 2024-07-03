@@ -1,4 +1,4 @@
-[PT-BR](/README-PT.md)
+[EN-US](/README.md)
 
 # YouShare | _0.0.1_
 ![GitHub language count](https://img.shields.io/github/languages/count/gabe-soares/youshare) ![GitHub top language](https://img.shields.io/github/languages/top/gabe-soares/youshare)    ![GitHub](https://img.shields.io/github/license/gabe-soares/youshare) ![GitHub repo size](https://img.shields.io/github/repo-size/gabe-soares/youshare) ![GitHub Repo stars](https://img.shields.io/github/stars/gabe-soares/youshare)
