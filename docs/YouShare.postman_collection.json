@@ -10,44 +10,11 @@
 			"name": "Posts",
 			"item": [
 				{
-					"name": "Get Posts Feed",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "en",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{posts-api-url}}post",
-							"host": [
-								"{{posts-api-url}}post"
-							],
-							"query": [
-								{
-									"key": "size",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "page",
-									"value": "0",
-									"disabled": true
-								},
-								{
-									"key": "sort",
-									"value": "content",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": [
+					"name": "posts-api",
+					"item": [
 						{
-							"name": "200",
-							"originalRequest": {
+							"name": "Get Posts Feed",
+							"request": {
 								"method": "GET",
 								"header": [
 									{
@@ -80,61 +47,75 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Sep 2023 21:31:15 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{posts-api-url}}post",
+											"host": [
+												"{{posts-api-url}}post"
+											],
+											"query": [
+												{
+													"key": "size",
+													"value": "2",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "content",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Sep 2023 21:31:15 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"content\": \"My first post was edited using Postman.\",\n            \"reactions\": 4,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T20:59:20\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 2,\n            \"content\": \"My second post, this time using Postman :D\",\n            \"reactions\": 0,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T17:59:45\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 3,\n            \"content\": \"My third post, this time using Postman :D\",\n            \"reactions\": 0,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T18:29:13\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 4,\n            \"content\": \"My fourth post, this time using Postman :D\",\n            \"reactions\": 0,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T18:29:18\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 5,\n            \"content\": \"My fifith post, this time using Postman :D\",\n            \"reactions\": 0,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T18:29:22\",\n            \"userId\": 1\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 5,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 5,\n    \"empty\": false\n}"
 								}
-							],
-							"cookie": [],
-							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"content\": \"My first post was edited using Postman.\",\n            \"reactions\": 4,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T20:59:20\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 2,\n            \"content\": \"My second post, this time using Postman :D\",\n            \"reactions\": 0,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T17:59:45\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 3,\n            \"content\": \"My third post, this time using Postman :D\",\n            \"reactions\": 0,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T18:29:13\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 4,\n            \"content\": \"My fourth post, this time using Postman :D\",\n            \"reactions\": 0,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T18:29:18\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 5,\n            \"content\": \"My fifith post, this time using Postman :D\",\n            \"reactions\": 0,\n            \"comments\": 0,\n            \"postedDateTime\": \"2023-09-12T18:29:22\",\n            \"userId\": 1\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 5,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 5,\n    \"empty\": false\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Post by Id",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "en",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{posts-api-url}}post/1",
-							"host": [
-								"{{posts-api-url}}post"
-							],
-							"path": [
-								"1"
 							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "200",
-							"originalRequest": {
+							"name": "Get Post by Id",
+							"request": {
 								"method": "GET",
 								"header": [
 									{
@@ -144,82 +125,76 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/post/1",
-									"protocol": "http",
+									"raw": "{{posts-api-url}}post/1",
 									"host": [
-										"localhost"
+										"{{posts-api-url}}post"
 									],
-									"port": "8080",
 									"path": [
-										"post",
 										"1"
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 09 Sep 2023 05:00:40 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8080/post/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"post",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 09 Sep 2023 05:00:40 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": \"First post!\",\n    \"reactions\": 0,\n    \"comments\": 0,\n    \"postedDateTime\": \"2023-09-09T04:30:42\",\n    \"userId\": 1\n}"
 								}
-							],
-							"cookie": [],
-							"body": "{\n    \"content\": \"First post!\",\n    \"reactions\": 0,\n    \"comments\": 0,\n    \"postedDateTime\": \"2023-09-09T04:30:42\",\n    \"userId\": 1\n}"
-						}
-					]
-				},
-				{
-					"name": "Post Content",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {}
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "en",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"userId\": 1,\r\n    \"content\": \"My second post, this time using Postman :D\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{posts-api-url}}post",
-							"host": [
-								"{{posts-api-url}}post"
 							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "201",
-							"originalRequest": {
+							"name": "Post Content",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
 								"method": "POST",
 								"header": [
 									{
@@ -238,85 +213,85 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/post",
-									"protocol": "http",
+									"raw": "{{posts-api-url}}post",
 									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"post"
+										"{{posts-api-url}}post"
 									]
 								}
 							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Location",
-									"value": "http://localhost:8080/post/3"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 09 Sep 2023 05:00:11 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
+									"name": "201",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\": 1,\r\n    \"content\": \"My second post, this time using Postman :D\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/post",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"post"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/post/3"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 09 Sep 2023 05:00:11 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": \"My second post, this time using Postman :D\",\n    \"reactions\": 0,\n    \"comments\": 0,\n    \"postedDateTime\": \"2023-09-09T02:00:11.5933233\",\n    \"userId\": 1\n}"
 								}
-							],
-							"cookie": [],
-							"body": "{\n    \"content\": \"My second post, this time using Postman :D\",\n    \"reactions\": 0,\n    \"comments\": 0,\n    \"postedDateTime\": \"2023-09-09T02:00:11.5933233\",\n    \"userId\": 1\n}"
-						}
-					]
-				},
-				{
-					"name": "Edit Post",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {}
-					},
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "en",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"contentId\": 1,\r\n    \"newContent\": \"My first post was edited using Postman.\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{posts-api-url}}post",
-							"host": [
-								"{{posts-api-url}}post"
 							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "200",
-							"originalRequest": {
+							"name": "Edit Post",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
 								"method": "PUT",
 								"header": [
 									{
@@ -341,62 +316,67 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Sep 2023 21:10:28 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
+									"name": "200",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"contentId\": 1,\r\n    \"newContent\": \"My first post was edited using Postman.\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{posts-api-url}}post",
+											"host": [
+												"{{posts-api-url}}post"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Sep 2023 21:10:28 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": \"My first post was edited using Postman.\",\n    \"reactions\": 0,\n    \"comments\": 0,\n    \"postedDateTime\": \"2023-09-12T20:59:20\",\n    \"userId\": 1\n}"
 								}
-							],
-							"cookie": [],
-							"body": "{\n    \"content\": \"My first post was edited using Postman.\",\n    \"reactions\": 0,\n    \"comments\": 0,\n    \"postedDateTime\": \"2023-09-12T20:59:20\",\n    \"userId\": 1\n}"
-						}
-					]
-				},
-				{
-					"name": "React to Post",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "en",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{posts-api-url}}post/1/react",
-							"host": [
-								"{{posts-api-url}}post"
-							],
-							"path": [
-								"1",
-								"react"
 							]
-						}
-					},
-					"response": [
+						},
 						{
-							"name": "200",
-							"originalRequest": {
+							"name": "React to Post",
+							"request": {
 								"method": "GET",
 								"header": [
 									{
@@ -416,33 +396,58 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Sep 2023 21:11:41 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{posts-api-url}}post/1/react",
+											"host": [
+												"{{posts-api-url}}post"
+											],
+											"path": [
+												"1",
+												"react"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Sep 2023 21:11:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": \"My first post was edited using Postman.\",\n    \"reactions\": 4,\n    \"comments\": 0,\n    \"postedDateTime\": \"2023-09-12T20:59:20\",\n    \"userId\": 1\n}"
 								}
-							],
-							"cookie": [],
-							"body": "{\n    \"content\": \"My first post was edited using Postman.\",\n    \"reactions\": 4,\n    \"comments\": 0,\n    \"postedDateTime\": \"2023-09-12T20:59:20\",\n    \"userId\": 1\n}"
+							]
 						}
 					]
 				}
